@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-API_KEY = os.getenv("AIzaSyCfs97jJWHdPB9GATXGig6rFZ2IHmwE1LU")
+API_KEY = os.getenv("AIzaSyDJRqHKHlXnW1Q_PVufoy5U56a_IIYbqFI")
 MODEL = "models/gemini-2.0-flash"
 
 @app.route("/ask", methods=["POST"])
