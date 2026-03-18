@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-API_KEY = os.getenv("AIzaSyDJRqHKHlXnW1Q_PVufoy5U56a_IIYbqFI")
+API_KEY = os.getenv("GEMINI_API_KEY")
 MODEL = "models/gemini-2.0-flash"
 
 @app.route("/ask", methods=["POST"])
@@ -12,7 +12,7 @@ def ask():
     data = request.json
     prompt = data.get("prompt", "")
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/{MODEL}:generateContent?key={API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API_KEY}"
 
     payload = {
         "contents": [
